@@ -1,4 +1,41 @@
+:root {
+    --black: #332d2d00;
+    --white: #FFFF;
+    --purple: #c7166f;
+    --blue: #30c9e8;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+body {
+    background-color: var(--black);
+}
+
+h1, h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-image: linear-gradient(to right, var(--purple) , var(--blue));
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.lordicon-com {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--blue);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
