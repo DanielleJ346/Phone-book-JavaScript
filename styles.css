@@ -14,10 +14,15 @@ body {
     background-color: var(--black);
 }
 
-h1, h2 {
+h1, h2, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -32,10 +37,79 @@ h1, h2 {
     align-items: center;
 }
 
-footer {
-    background-color: var(--blue);
+/* search bar*/
+#searchbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:7px;
+    border-radius: 10px;
+}
+
+input[id=searchbar] {
+    width: 30%;
+    -webkit-transition: width 0.15s ease-in-out;
+    transition: width 0.15s ease-in-out;
+}
+
+/* When the input field gets focus,
+    change its width to 100% */
+input[id=searchbar]:focus {
+    width: 70%;
+}
+
+
+/* Save Button styling and animation*/
+.button {
+    width: 100%;
+    background-color: rgb(12, 219, 12);
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    padding: 7px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+/* contact table styling*/
+.table {
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: var(--black);
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 10px #000000;
 }
