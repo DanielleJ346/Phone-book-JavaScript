@@ -58,6 +58,22 @@ input[id=searchbar]:focus {
     width: 70%;
 }
 
+/* when searching for a contact*/
+.hidden {
+    display: none;
+}
+
+/* for validating phone-numbers*/
+.valid {
+    border: 1px solid green;
+}
+
+.invalid {
+    border: 1px solid red;
+    background-color: pink; /* Add a background color to highlight the input */
+}
+
+
 
 /* Save Button styling and animation*/
 .button {

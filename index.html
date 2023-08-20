@@ -37,15 +37,15 @@
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="personName">Name:</label>
-                        <input type="text" class="form-control" id="personName">
+                        <input type="text" class="form-control" id="personName" required>
                     </div>
                     <div class="form-group">
                         <label for="surname">Surname:</label>
-                        <input type="text" class="form-control" id="surname">
+                        <input type="text" class="form-control" id="surname" required>
                     </div>
                     <div class="form-group">
                         <label for="personMobile">Mobile Number:</label>
-                        <input type="text" class="form-control" id="personMobile">
+                        <input type="text" class="form-control" id="personMobile" required>
                     </div>
                     <button class="button" type="submit"><span>Save</span></button>
                 </form>
@@ -64,6 +64,7 @@
                                 <th>Name</th>
                                 <th>Surname</th>
                                 <th>Contact</th>
+                                <th></th>
                             </tr>
                         </thead>
                            <tbody id="phonebookResult">
