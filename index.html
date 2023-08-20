@@ -3,23 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone-book</title>
+    <title>My Phonebook</title>
     <!--Favicon-->
     <link rel="icon" type="image/x-icon" href="/images/icons8-phone-book-16.png">
 
     <!--Bootstrap core CSS-->
+    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    
 </head>
-<body onload="fetchPhonebook()">
-    <div class="container-fluid bg-dark text-light" >
+<body onload="fetchPhonebook()" style="background-color: black;">
+    <!-- Nav bar showing the phonebook logo and navigating to your contacts quickly-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">
+                <img src="./images/icons8-phone-book-64.png" height="45" alt="Phonebook">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item navbar-brand active">Phonebook</a>
+                </div>
+                <div class="navbar-nav ms-auto">
+                    <a href="#my-contacts" class="nav-item nav-link">My Contacts</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Enter in your contacts and view your saved contacts-->
+    <div class="container-fluid text-light" id="background">
         <div class="container">
             <div class="header clearfix">
-                <nav>
-    
-                </nav>
-                <div class="lordicon-com">
+                <div class="lordicon-com"> <!--Lordicon icon animated people talking-->
                         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                     <lord-icon
                         src="https://cdn.lordicon.com/mjmrmyzg.json"
@@ -31,8 +50,9 @@
                 
                 <h1>Phone Book</h1>
             </div>
-    
-            <div class="jumbotron">
+
+            <!--Input your contacts name, surname and mobile phone number-->
+            <div class="jumbotron" id="my-contacts">
                 <h2>Save Your Important Contacts</h2>
                 <form id="contactForm">
                     <div class="form-group">
@@ -50,7 +70,8 @@
                     <button class="button" type="submit"><span>Save</span></button>
                 </form>
             </div>
-    
+            
+            <!--View the list of all contacts you have entered into the form above -->
             <div class="row">
                 <div class="col-lg-12">
                     <h3>Your Saved Contacts</h3>
@@ -76,16 +97,17 @@
         </div>
     </div>
     
-    <div class="footer  p-4 bg-secondary text-white text-center">
+    <!--Footer-->
+    <div class="footer p-4 bg-dark text-white text-center">
         <div class="row">
             <div class="col-md">
                 <p>&copy; 2023 Phonebook, Inc.</p>
             </div>
             <div class="col-md">
-                <p>Phone book icons by <a href="https://icons8.com/icons/set/phone-book">Icons8</a></p>
+                <p>Phone book icons by <a href="https://icons8.com/icons/set/phone-book" style="color: #c7166f">Icons8</a></p>
             </div>
             <div class="col-md">
-                <a href="https://lordicon.com/">Icons by Lordicon.com</a>
+                <a href="https://lordicon.com/" style="color: #c7166f;">Icons by Lordicon.com</a>
             </div>
         </div>  
     </div>

@@ -1,5 +1,5 @@
 :root {
-    --black: #332d2d00;
+    --black: #1a181800;
     --white: #FFFF;
     --purple: #c7166f;
     --blue: #30c9e8;
@@ -8,6 +8,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -20,15 +21,21 @@ h1, h2, h3 {
     align-items: center;
 }
 
+h2, h3 {
+    font-family: 'Montserrat';
+}
+
 h3 {
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
+/* phonebook container*/
 .container {
     background-image: linear-gradient(to right, var(--purple) , var(--blue));
     border-radius: 10px;
     padding: 10px;
+    margin: 10px 0 10px 0;
 }
 
 .lordicon-com {
