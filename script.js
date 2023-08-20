@@ -83,7 +83,7 @@ function fetchPhonebook() {
         var surname = phonebook[i].surname;
         var mobile = phonebook[i].mobile;
 
-        phonebookResult.innerHTML += '<tr>'+
+        phonebookResult.innerHTML += '<tr class="contact-row">'+
                                     '<td class="contact-name">'+name+'</td>'+
                                     '<td class="contact-surname">'+surname+'</td>' +
                                     '<td class="contact-number">'+mobile+'</td>' +
@@ -101,14 +101,16 @@ function search_contact() {
     for (let i = 0; i < rows.length; i++) {
         let name = rows[i].querySelector('.contact-name').textContent.toLowerCase();
         let surname = rows[i].querySelector('.contact-surname').textContent.toLowerCase();
+        let mobile = rows[i].querySelector('.contact-number').textContent.toLowerCase();
 
         if (name.includes(input) || surname.includes(input)) {
-            rows[i].classList.remove('hidden');
+            rows[i].classList.remove('hidden'); // Show rows that match the search
         } else {
-            rows[i].classList.add('hidden');
+            rows[i].classList.add('hidden');    // Hide rows that don't match
         }
     }
 }
+
 
 
 //delete contacts

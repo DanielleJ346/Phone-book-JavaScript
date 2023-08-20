@@ -53,6 +53,19 @@ h3 {
     border-radius: 10px;
 }
 
+.searchBar{
+    display: flex;
+}
+
+#search-icon {
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
 input[id=searchbar] {
     width: 30%;
     -webkit-transition: width 0.15s ease-in-out;
